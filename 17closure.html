@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+</html>
+<script>
+    // closure: Closure means that an inner function always has access to the vars and parameters of its outer function, even after the outer function has returned.
+    function OuterFunc()
+    {
+        let num = 0;
+        function InnerFunc()
+        {
+            return num+=1;
+        }
+       return  InnerFunc
+    }
+    data = OuterFunc()
+    console.log(data());
+    console.log(data());
+    // console.log(data());
+    // console.log(data());
+</script>
